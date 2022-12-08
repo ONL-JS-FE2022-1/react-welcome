@@ -1,4 +1,13 @@
-const root = document.querySelector('#root');
-const h1 = React.createElement('h1', {}, 'Hello React!');
+class HeaderComponent extends React.Component {
+    render() {
+        const p = React.createElement('p', {}, 'Super paragraph');
+        const h2 = React.createElement('h2', {}, 'Header');
+        const article = React.createElement('atricle', {}, h2, p); 
+        return article;
+    }
+}
 
-ReactDOM.render(h1, root); // прицепить, заапендить = монтировать
+const component = React.createElement(HeaderComponent);
+
+const root = document.querySelector('#root');
+ReactDOM.render(component, root);

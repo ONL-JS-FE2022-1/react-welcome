@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 class Counter extends React.Component {
     constructor(props) {
         super(props);
@@ -37,12 +40,3 @@ const component = React.createElement(Counter);
 
 const root = document.querySelector('#root');
 ReactDOM.render(component, root);
-
-/*
-Базовий рівень.
-Зробіть такий же counter, який буде крі інкременту вміти ще декрементувати лічильник.
-
-Продвинутий рівень.
-Лічильник не має опускатись нижче нуля
-
-*/

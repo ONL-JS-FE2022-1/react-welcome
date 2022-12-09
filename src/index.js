@@ -1,11 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import Counter from "./components/Counter";
 import * as MyMath from './components/Math';
 
 console.log(MyMath.sum(3,3));
 
-const component = React.createElement(Counter);
-
-const root = document.querySelector('#root');
-ReactDOM.render(component, root);
+const root = createRoot(document.getElementById('root'));
+root.render(<Counter />);
